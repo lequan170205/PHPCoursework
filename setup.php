@@ -3,8 +3,8 @@ include 'includes/query.php';
 try {
     $pdo = new PDO("mysql:host=localhost", "root", "");
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $pdo->exec("CREATE DATABASE IF NOT EXISTS studentq_db");
-    $pdo->exec("USE studentq_db");
+    $pdo->exec("CREATE DATABASE IF NOT EXISTS forum_db");
+    $pdo->exec("USE forum_db");
     $pdo->exec("
         CREATE TABLE IF NOT EXISTS users (
             user_id INT AUTO_INCREMENT PRIMARY KEY,

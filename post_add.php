@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         try {
             if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
                 $upload = new UploadApi();
-                $result = $upload->upload($_FILES['image']['tmp_name'], ['folder' => 'studentq/posts', 'public_id' => time() . '_' . basename($_FILES['image']['name'])]);
+                $result = $upload->upload($_FILES['image']['tmp_name'], ['folder' => 'forum_db/posts', 'public_id' => time() . '_' . basename($_FILES['image']['name'])]);
                 $image_path = $result['secure_url'];
             }
             insertPost($pdo, $title, $content, $image_path, $_SESSION['user_id'], $module_id);

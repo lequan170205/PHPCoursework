@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Validate inputs
     if (strlen($name) < 2 || !filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($message) < 10) {
         $title = 'Contact Admin';
-        $output = '<p class="text-red-500">Name must be 2+ characters, email must be valid, and message 10+ characters</p>';
+        $output = '<p class="text-red-500"message 10+ characters</p>';
         ob_start();
         include 'templates/contact.html.php';
         $output .= ob_get_clean();
