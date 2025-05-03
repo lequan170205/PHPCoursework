@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $message = $_POST['message'];
 
     // Validate inputs
-    if (strlen($name) < 2 || !filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($message) < 10) {
+    if (strlen($message) < 10) {
         $title = 'Contact Admin';
         $output = '<p class="text-red-500"message 10+ characters</p>';
         ob_start();
